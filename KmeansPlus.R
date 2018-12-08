@@ -1,9 +1,3 @@
-#############################
-## Project:
-## Group Members:
-## 960:588, Data Mining
-#############################
-
 rm(list=ls())
 
 #############################
@@ -24,10 +18,6 @@ words = c("sweet", "acid", "earthy", "fruit", "tannin", "herb",
 X = wines[, words]
 X = as.matrix(X)
 X = scale(X)
-
-####################################################
-##### The above part is obtained from homework #####
-####################################################
 
 n = dim(X)[1]
 p = dim(X)[2]
@@ -59,10 +49,6 @@ for(i in 2:k){
 }
 
 fit_kplus <- kmeans(X, centers = X[cent,])
-
-########################################################
-##### The following part is obtained from homework #####
-########################################################
 
 cluster1 = which(fit_kplus$cluster == 1)
 cluster2 = which(fit_kplus$cluster == 2)
